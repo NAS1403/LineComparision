@@ -1,6 +1,5 @@
 package com.bridgelabz.LineComparision;
 import java.util.Scanner;
-import java.lang.*;
 
 public class LineComparison {
 
@@ -16,7 +15,7 @@ public class LineComparison {
         int x2 = scr.nextInt();
         System.out.println("Enter point y2 ");
         int y2 = scr.nextInt();
-        double length1 = Math.sqrt((Math.pow((x2-x1),2))+(Math.pow((y2-y1),2)));
+        Double length1 = Math.sqrt((Math.pow((x2-x1),2))+(Math.pow((y2-y1),2)));
         System.out.println("Length of first line: "+length1);
 
 
@@ -29,12 +28,14 @@ public class LineComparison {
         int x4 = scr.nextInt();
         System.out.println("Enter point y4 ");
         int y4 = scr.nextInt();
-        double length2 = Math.sqrt((Math.pow((x4-x3),2))+(Math.pow((y4-y3),2)));
+        Double length2 = Math.sqrt((Math.pow((x4-x3),2))+(Math.pow((y4-y3),2)));
         System.out.println("Length of second line is: "+length2);
-        if (length2==length1){
+
+        boolean result  = length2.equals(length1);
+        if ( result ==true ){
             System.out.println("Lines are equal");
         }
-        else {
+        else{
             System.out.println("Lines are not equal");
         }
 
