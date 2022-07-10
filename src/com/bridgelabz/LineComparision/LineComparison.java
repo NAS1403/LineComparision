@@ -16,7 +16,7 @@ public class LineComparison {
         int x2 = scr.nextInt();
         System.out.println("Enter point y2 ");
         int y2 = scr.nextInt();
-        double length1 = Math.sqrt((Math.pow((x2-x1),2))+(Math.pow((y2-y1),2)));
+        Double length1 = Math.sqrt((Math.pow((x2-x1),2))+(Math.pow((y2-y1),2)));
         System.out.println("Length of first line: "+length1);
 
 
@@ -29,14 +29,19 @@ public class LineComparison {
         int x4 = scr.nextInt();
         System.out.println("Enter point y4 ");
         int y4 = scr.nextInt();
-        double length2 = Math.sqrt((Math.pow((x4-x3),2))+(Math.pow((y4-y3),2)));
+        Double length2 = Math.sqrt((Math.pow((x4-x3),2))+(Math.pow((y4-y3),2)));
         System.out.println("Length of second line is: "+length2);
-        if (length2==length1){
+
+        int result = length2.compareTo(length1);
+        if (result==0){
             System.out.println("Lines are equal");
+        } else if (result>0) {
+            System.out.println("Line 2 is greater than line 1");
         }
         else {
-            System.out.println("Lines are not equal");
+            System.out.println("line 1 is greater than line 2");
         }
+
 
     }
 }
